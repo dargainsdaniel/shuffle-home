@@ -1,0 +1,32 @@
+{
+  "id": "./",
+  "name": "Shuffle Home",
+  "short_name": "Shuffle Home",
+  "description": "Pok\u00e9mon Shuffle reference, collection, teams and plans.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#10171d",
+  "theme_color": "#10171d",
+  "lang": "en",
+  "icons": [
+    {
+      "src": "./icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./notion-app-icon.png",
+      "sizes": "350x350",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}

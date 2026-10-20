@@ -896,14 +896,15 @@ const personalDefaults = {pokemon: seed.pokemon.map(freshPersonalPokemon), teams
 
 const personalStore=ShuffleStorage.open({getItem:k=>localStorage.getItem(k),setItem:(k,v)=>localStorage.setItem(k,v)},storageKey,personalDefaults);let state=personalStore.data;for(const mon of seed.pokemon){if(!state.pokemon.some(x=>x.id===mon.id))state.pokemon.push(freshPersonalPokemon(mon))}for(const mon of state.pokemon){const ref=pokemonReferences[mon.id];if(ref)mon.name=ref.name;if(ref)for(const skill of ref.skills){if(!Object.hasOwn(mon.skills,skill))mon.skills[skill]=1}}let collectionPage=0,planningFilter='all',rmlFilter='all';let previous=null,page='Home',week=0,query='',capture='all',type='all',maxsl='all',sort='name',selected=new Set(),visibleIds=[],expanded=new Set();const main=document.getElementById('main'),dialog=document.getElementById('detail');const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));const p=id=>state.pokemon.find(x=>x.id===id);const active=key=>state.plan.find(x=>x.key===key&&!x.done);const names=['Home','Collection','Stages','Events','Teams','My Plan','Library','Profile','Data & backup'];
 function commit(fn,msg='Saved'){previous=structuredClone(state);fn();const result=personalStore.save(state);notice(result.ok?uiPlain`${uiLabel(msg)} on this device`:uiPlain`${uiLabel(msg)} — session only. ${uiLabel(result.message)}`,true)}
-function notice(msg,undo=false){msg=uiLabel(msg);document.getElementById('notice').innerHTML=esc(msg)+(undo?uiTemplate` <button onclick="undoChange()">Undo</button>`:'')}
+let noticePage=null;
+function notice(msg,undo=false,scope='persistent'){msg=uiLabel(msg);noticePage=scope==='page'?page:null;document.getElementById('notice').innerHTML=esc(msg)+(undo?uiTemplate` <button onclick="undoChange()">Undo</button>`:'')}
 function undoChange(){if(!previous)return;state=previous;previous=null;const result=personalStore.save(state);if(dialog.open)dialog.close();render();notice(result.ok?'Change undone on this device':uiPlain`Change undone in this session only. ${uiLabel(result.message)}`)}
 function resetDemo(){commit(()=>{state=structuredClone(seed)},uiLabel('Demo reset'));selected.clear();if(dialog.open)dialog.close();render()}
 function go(name){if(dialog.open)dialog.close();page=name;render()}
 function add(kind,id,name){if(kind==='Event'){id=canonicalEventId(id);if(activeEvent(id)){go('My Plan');return}}const key=(kind==='Pokemon'?'p:':kind==='Event'?'e:':'s:')+id;if(active(key)){go('My Plan');return}commit(()=>state.plan.push({key,kind,id,name,goal:'',notes:'',team:'',done:false,focus:false}),uiLabel('Added to My Plan'));render();if(dialog.open){dialog.querySelectorAll('[data-add]').forEach(el=>{if(el.dataset.planKey===key||(!el.dataset.planKey&&dialog.querySelectorAll('[data-add]').length===1))el.replaceWith(addButtonNode(kind,id,name))})}}
 function addButtonNode(kind,id,name){let el=document.createElement('button');el.textContent=uiLabel('In My Plan');el.onclick=()=>go('My Plan');return el}
 function addButton(kind,id,name){let key=(kind==='Pokemon'?'p:':kind==='Event'?'e:':'s:')+id;return uiTemplate`<button data-add data-plan-key="${esc(kind==='Event'?'e:'+canonicalEventId(id):key)}" onclick="${esc('add('+JSON.stringify(kind)+','+JSON.stringify(id)+','+JSON.stringify(name)+')')}">${(kind==='Event'?activeEvent(id):active(key))?uiLabel('In My Plan'):uiLabel('Add to plan')}</button>`}
-function renderPageBase(){document.getElementById('nav').innerHTML=names.map(n=>uiTemplate`<button ${page===n?'aria-current="page"':''} onclick="go('${n}')">${esc(uiLabel(n))}</button>`).join('');({Home:home,Collection:collection,Stages:stages,Events:events,Teams:teams,'My Plan':plan,Library:library,Profile:playerProfile,'Data & backup':backupPage}[page])()}
+function renderPageBase(){if(noticePage!==null&&noticePage!==page){document.getElementById('notice').innerHTML='';noticePage=null}document.getElementById('nav').innerHTML=names.map(n=>uiTemplate`<button ${page===n?'aria-current="page"':''} onclick="go('${n}')">${esc(uiLabel(n))}</button>`).join('');({Home:home,Collection:collection,Stages:stages,Events:events,Teams:teams,'My Plan':plan,Library:library,Profile:playerProfile,'Data & backup':backupPage}[page])()}
 function plannedStageContext(item){
  if(item.kind!=='Stage')return '';
  const r=stageReferences.find(r=>r.key===item.id);if(!r)return '';
@@ -921,11 +922,11 @@ function filterCollectionBase(){return state.pokemon.filter(x=>matchesFarmFilter
 
 function megaValue(x,m){return x.msuByMega?.[m.mega]??0}
 function megaFields(x){const entries=multiMega[x.name];if(!entries)return '';return uiTemplate`<fieldset><legend>Mega Speedups</legend><p class="hint">MSU is recorded separately for each Mega. Other attributes above are shared.</p>${x.msu!==null&&x.msu!==undefined?uiTemplate`<p>Previous unassigned MSU: ${esc(x.msu)}. Kept separately; not assigned to X or Y.</p>`:''}<div class="bar">${entries.map((m,i)=>uiTemplate`<label>${esc(m.mega)} · max ${m.msuCap}<input type="number" inputmode="numeric" aria-label="MSU ${esc(m.mega)}" min="0" max="${m.msuCap}" step="1" value="${megaValue(x,m)}" onchange="saveMegaNumber(this,'${x.id}',${i})"></label>`).join('')}</div></fieldset>`}
-function saveMegaNumber(input,id,index){const x=p(id),m=multiMega[x.name]?.[index];if(!m)return;const value=Number(input.value);if(input.value.trim()===''||!Number.isInteger(value)||value<0||value>m.msuCap){input.value=megaValue(x,m);const message=uiPlain`Use a whole number from ${0} to ${m.msuCap}. Previous value kept.`;numberFeedback(input,message);notice(message);return}numberFeedback(input);commit(()=>{x.msuByMega??={};x.msuByMega[m.mega]=value},uiLabel('Saved'))}
+function saveMegaNumber(input,id,index){const x=p(id),m=multiMega[x.name]?.[index];if(!m)return;const value=Number(input.value);if(input.value.trim()===''||!Number.isInteger(value)||value<0||value>m.msuCap){input.value=megaValue(x,m);const message=uiPlain`Use a whole number from ${0} to ${m.msuCap}. Previous value kept.`;if(!numberFeedback(input,message))notice(message,false,'page');return}numberFeedback(input);commit(()=>{x.msuByMega??={};x.msuByMega[m.mega]=value},uiLabel('Saved'))}
 function megaSummary(x){return (multiMega[x.name]??[]).map(m=>uiTemplate`<div><dt>${esc(m.mega)} MSU</dt><dd>${megaValue(x,m)} / ${m.msuCap}</dd></div>`).join('')}
 
 function num(x,field,value,min,max){const verified=verifiedLimits[x.name];if(field!=='sl')max=verified?.[field];const unavailable=max===undefined||max===null;return uiTemplate`<input type="number" inputmode="numeric" aria-label="${field.toUpperCase()} ${esc(x.name)}" min="${min}" ${unavailable?'readonly title="Reference limit unavailable"':uiPlain`max="${max}" title="${min}–${max}"`} step="1" value="${value}" onchange="saveNumber(this,'${x.id}','${field}',${min},${unavailable?'null':max})">`}
-function saveNumber(input,id,field,min,max){const x=p(id),previousValue=field==='sl'?x.skills[x.skill]:x[field],value=Number(input.value);if(max===null||input.value.trim()===''||!Number.isInteger(value)||value<min||value>max){input.value=previousValue;const message=uiPlain`Use a whole number from ${min} to ${max}. Previous value kept.`;numberFeedback(input,message);notice(message);return}numberFeedback(input);edit(id,field,value)}
+function saveNumber(input,id,field,min,max){const x=p(id),previousValue=field==='sl'?x.skills[x.skill]:x[field],value=Number(input.value);if(max===null||input.value.trim()===''||!Number.isInteger(value)||value<min||value>max){input.value=previousValue;const message=uiPlain`Use a whole number from ${min} to ${max}. Previous value kept.`;if(!numberFeedback(input,message))notice(message,false,'page');return}numberFeedback(input);edit(id,field,value)}
 function saveAttributeBase(id,field,value){commit(()=>{let x=p(id);if(field==='sl')x.skills[x.skill]=value;else x[field]=value},uiLabel('Saved'));}
 
 function bulkUpdate(field,raw){
@@ -2576,12 +2577,12 @@ function refreshProfileSkill(...context){
 // Keep rejected numeric-edit explanations with their field inside the modal.
 let numberFeedbackSequence=0;
 function numberFeedback(input,message=''){
- if(!input.closest?.('dialog[open] .profile-personal'))return;
+ if(!input.closest?.('dialog[open] .profile-personal'))return false;
  const ownId=input.getAttribute('data-number-feedback'),existing=ownId?document.getElementById(ownId):null;
  if(!message){
   existing?.remove();
   if(ownId){const remaining=(input.getAttribute('aria-describedby')||'').split(/\s+/).filter(id=>id&&id!==ownId);if(remaining.length)input.setAttribute('aria-describedby',remaining.join(' '));else input.removeAttribute('aria-describedby');input.removeAttribute('data-number-feedback')}
-  return;
+  return true;
  }
  let feedback=existing;
  if(!feedback){
@@ -2589,6 +2590,7 @@ function numberFeedback(input,message=''){
   input.setAttribute('aria-describedby',[...new Set((input.getAttribute('aria-describedby')||'').split(/\s+/).filter(Boolean).concat(feedback.id))].join(' '));
  }
  feedback.textContent=message;
+ return true;
 }
 
 function profileSkills(id){

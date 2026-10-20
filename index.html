@@ -758,8 +758,27 @@ const ShuffleStorage = (() => {
         validate(next);
         if(storage.getItem(key)!==expected)throw Error('Another tab changed your data. Export your current edits, then reload before saving.');
         const encoded=JSON.stringify(next);
-        if(restore)storage.setItem(key+':before-restore',expected??JSON.stringify(data));
-        storage.setItem(key,encoded);expected=encoded;data=structuredClone(next);blocked=false;
+        const recoveryKey=key+':before-restore';
+        let priorRecovery=null,recoveryValue;
+        if(restore){
+          priorRecovery=storage.getItem(recoveryKey);
+          recoveryValue=expected??JSON.stringify(data);
+          storage.setItem(recoveryKey,recoveryValue);
+        }
+        try { storage.setItem(key,encoded); }
+        catch(e){
+          if(restore){
+            try {
+              if(storage.getItem(recoveryKey)!==recoveryValue)throw Error('The recovery copy changed in another tab.');
+              if(priorRecovery===null)storage.removeItem(recoveryKey);
+              else storage.setItem(recoveryKey,priorRecovery);
+            } catch(recoveryError){
+              throw Error((e.message||'Device storage is unavailable.')+' The previous recovery copy could not be restored. '+recoveryError.message);
+            }
+          }
+          throw e;
+        }
+        expected=encoded;data=structuredClone(next);blocked=false;
         return {ok:true};
       } catch(e) { return {ok:false,message:e.message || 'Device storage is unavailable.'}; }
     }

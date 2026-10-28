@@ -1,0 +1,224 @@
+{
+  "schema": "shuffle-interface-assets-v1",
+  "visbyDecision": "Use the owner supplied complete Visby CF Bold and Regular files for display text",
+  "visbyLicenseConfirmed": false,
+  "visbyLicenseOwnerAction": "Owner confirms public web embedding rights before release; no independent license verification is claimed.",
+  "outfit": "Named display fallback only; no local Outfit binary was present or substituted.",
+  "pokemonNavigationIcon": "pets until the requested Pikachu-head silhouette is derived from the existing game icon and approved.",
+  "iconInventory": {
+    "source": "design/prototype/ICONS.json",
+    "sourceSha256": "ae62a9d4bdeb4d1e4d0f58e750884bdd68326273ec58b2b758edfae342f060f2",
+    "count": 73,
+    "names": [
+      "add",
+      "arrow_back",
+      "arrow_downward",
+      "arrow_upward",
+      "article",
+      "auto_stories",
+      "badge",
+      "block",
+      "bolt",
+      "calculate",
+      "calendar_month",
+      "calendar_view_week",
+      "check",
+      "check_circle",
+      "checklist",
+      "chevron_left",
+      "chevron_right",
+      "close",
+      "cloud_off",
+      "content_copy",
+      "date_range",
+      "delete",
+      "download",
+      "drag_indicator",
+      "edit",
+      "emoji_events",
+      "error",
+      "event_busy",
+      "expand_more",
+      "explore_off",
+      "flag",
+      "forest",
+      "grid_on",
+      "group",
+      "group_off",
+      "help",
+      "history",
+      "home",
+      "info",
+      "install_mobile",
+      "leaderboard",
+      "login",
+      "menu_book",
+      "more_vert",
+      "my_location",
+      "offline_pin",
+      "open_in_new",
+      "pause",
+      "person",
+      "pets",
+      "playlist_add",
+      "playlist_add_check",
+      "redeem",
+      "remove",
+      "schedule",
+      "science",
+      "search",
+      "search_off",
+      "shield",
+      "smartphone",
+      "sort",
+      "stadia_controller",
+      "stairs",
+      "star",
+      "swap_horiz",
+      "today",
+      "touch_app",
+      "translate",
+      "tune",
+      "undo",
+      "upload",
+      "view_agenda",
+      "warning"
+    ],
+    "axes": {
+      "FILL": [
+        0,
+        1
+      ],
+      "wght": 400,
+      "GRAD": 0,
+      "opsz": [
+        20,
+        48
+      ]
+    },
+    "filledVariantUsed": [
+      "badge",
+      "calendar_month",
+      "date_range",
+      "emoji_events",
+      "flag",
+      "forest",
+      "grid_on",
+      "home",
+      "menu_book",
+      "pets",
+      "redeem",
+      "schedule",
+      "stairs",
+      "star",
+      "today"
+    ]
+  },
+  "materialSubset": {
+    "officialCssApi": "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,400,0..1,0&icon_names=add,arrow_back,arrow_downward,arrow_upward,article,auto_stories,badge,block,bolt,calculate,calendar_month,calendar_view_week,check,check_circle,checklist,chevron_left,chevron_right,close,cloud_off,content_copy,date_range,delete,download,drag_indicator,edit,emoji_events,error,event_busy,expand_more,explore_off,flag,forest,grid_on,group,group_off,help,history,home,info,install_mobile,leaderboard,login,menu_book,more_vert,my_location,offline_pin,open_in_new,pause,person,pets,playlist_add,playlist_add_check,redeem,remove,schedule,science,search,search_off,shield,smartphone,sort,stadia_controller,stairs,star,swap_horiz,today,touch_app,translate,tune,undo,upload,view_agenda,warning",
+    "responseEvidence": "task-02/MaterialSymbols-source.css",
+    "responseSha256": "2c588bd4c1cbc8d49fe9b288a639a41d7fbfd7040a0b35a36b0c60835a21d9df",
+    "method": "official Google Fonts CSS API at build-time; downloaded WOFF2 is local at runtime",
+    "renderValidation": "ligature and FILL/opsz rendering pending Task 11 native acceptance"
+  },
+  "files": [
+    {
+      "path": "assets/fonts/Visby-CF-Bold-1.ttf",
+      "bytes": 49932,
+      "sha256": "5c819516f0eb2efb3b7f708083bb1d1b575ab16664d7567839d4c1b1c2da4150",
+      "source": "Owner-installed full Visby CF file copied from design/prototype/assets/fonts/Visby-CF-Bold-1.ttf",
+      "noticeStatus": "owner web-embedding license confirmation pending"
+    },
+    {
+      "path": "assets/fonts/VisbyRegular.otf",
+      "bytes": 71372,
+      "sha256": "3a2a36b7c4b04a486f2603d0c23eb2c4cc3521a92d09020fcfd22a7bc66d2d5a",
+      "source": "Owner-installed full Visby CF file copied from design/prototype/assets/fonts/VisbyRegular.otf",
+      "noticeStatus": "owner web-embedding license confirmation pending"
+    },
+    {
+      "path": "assets/fonts/Poppins-Regular.ttf",
+      "bytes": 160316,
+      "sha256": "7e65201e9b79159e2300267cc885e16c8dcef2424cdfa09a29bfb0980a94a7ba",
+      "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/poppins/Poppins-Regular.ttf",
+      "notice": "assets/fonts/Poppins-OFL.txt"
+    },
+    {
+      "path": "assets/fonts/Poppins-Medium.ttf",
+      "bytes": 158576,
+      "sha256": "90373e7d838d32468438fc3e152dca0bdb12edcab99ea639f158790b1ba1fd05",
+      "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/poppins/Poppins-Medium.ttf",
+      "notice": "assets/fonts/Poppins-OFL.txt"
+    },
+    {
+      "path": "assets/fonts/Poppins-SemiBold.ttf",
+      "bytes": 157312,
+      "sha256": "d3bf1bdaf0550e83da9ac0b1d1d9fe6db086835a83aa28578e609a394b9a0286",
+      "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/poppins/Poppins-SemiBold.ttf",
+      "notice": "assets/fonts/Poppins-OFL.txt"
+    },
+    {
+      "path": "assets/fonts/Poppins-Bold.ttf",
+      "bytes": 155996,
+      "sha256": "983676516167748b74de6f4771fb384c664fd913acb8b471122ecacf5da5ea6c",
+      "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/poppins/Poppins-Bold.ttf",
+      "notice": "assets/fonts/Poppins-OFL.txt"
+    },
+    {
+      "path": "assets/fonts/Poppins-OFL.txt",
+      "bytes": 4385,
+      "sha256": "6be04893d770899a015649c7aa3b582f871b272f8747a92b78b17c3e5c8b2573",
+      "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/poppins/OFL.txt",
+      "noticeStatus": "self is upstream OFL license text"
+    },
+    {
+      "path": "assets/fonts/RobotoMono-wght.ttf",
+      "bytes": 183700,
+      "sha256": "66a80e79d17e4c7cabd162e2916578a4cc08fd19eef6e2a643305eae9c567b2b",
+      "source": "https://raw.githubusercontent.com/googlefonts/RobotoMono/main/fonts/variable/RobotoMono%5Bwght%5D.ttf",
+      "notice": "assets/fonts/RobotoMono-OFL.txt"
+    },
+    {
+      "path": "assets/fonts/RobotoMono-OFL.txt",
+      "bytes": 4395,
+      "sha256": "50ab8dd54680d3473f649c9db86fece88434d097c7834475c1c72d2f8c429215",
+      "source": "https://raw.githubusercontent.com/googlefonts/RobotoMono/main/OFL.txt",
+      "noticeStatus": "self is upstream OFL license text"
+    },
+    {
+      "path": "assets/fonts/MaterialSymbolsOutlined-subset.woff2",
+      "bytes": 21988,
+      "sha256": "05567085a29dbea93fb71270092aaca304c4357324997af5076152352722a487",
+      "source": "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,400,0..1,0&icon_names=add,arrow_back,arrow_downward,arrow_upward,article,auto_stories,badge,block,bolt,calculate,calendar_month,calendar_view_week,check,check_circle,checklist,chevron_left,chevron_right,close,cloud_off,content_copy,date_range,delete,download,drag_indicator,edit,emoji_events,error,event_busy,expand_more,explore_off,flag,forest,grid_on,group,group_off,help,history,home,info,install_mobile,leaderboard,login,menu_book,more_vert,my_location,offline_pin,open_in_new,pause,person,pets,playlist_add,playlist_add_check,redeem,remove,schedule,science,search,search_off,shield,smartphone,sort,stadia_controller,stairs,star,swap_horiz,today,touch_app,translate,tune,undo,upload,view_agenda,warning",
+      "notice": "assets/fonts/MaterialSymbols-LICENSE.txt"
+    },
+    {
+      "path": "assets/fonts/MaterialSymbols-LICENSE.txt",
+      "bytes": 11357,
+      "sha256": "58d1e17ffe5109a7ae296caafcadfdbe6a7d176f0bc4ab01e12a689b0499d8bd",
+      "source": "https://raw.githubusercontent.com/google/material-design-icons/master/LICENSE",
+      "noticeStatus": "self is upstream Apache 2.0 license text"
+    },
+    {
+      "path": "assets/interface/amelia-platinum.png",
+      "bytes": 95730,
+      "sha256": "8d6eb234c0cd7fd7ffa8786c0fe5ec60e7f5f75844fb52068ef3d49083e5481a",
+      "source": "design/prototype/assets/amelia-platinum.png",
+      "noticeStatus": "owner project asset; no separate notice found in named local sources"
+    },
+    {
+      "path": "assets/interface/icon-192.png",
+      "bytes": 28272,
+      "sha256": "8514e07efab0929476394350e4c67da98a12b90c2123f93ac7bf34384f0549bc",
+      "source": "design/prototype/assets/app-icon/icon-192.png",
+      "noticeStatus": "owner project asset; no separate notice found in named local sources"
+    },
+    {
+      "path": "assets/interface/icon-512.png",
+      "bytes": 117691,
+      "sha256": "6e6ff79e090d972c21affd0eb26a09781bf460c78d6a707343e23fa8e171a5a2",
+      "source": "design/prototype/assets/app-icon/icon-512.png",
+      "noticeStatus": "owner project asset; no separate notice found in named local sources"
+    }
+  ]
+}

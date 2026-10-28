@@ -1,0 +1,460 @@
+{
+  "schema": "shuffle-vendor-manifest-v1",
+  "name": "appwrite",
+  "version": "29.1.0",
+  "exportedGlobal": "Appwrite",
+  "license": "BSD-3-Clause",
+  "sourceArchive": {
+    "path": "sdk-intake-v001/appwrite-29.1.0.tgz",
+    "sha256": "4a836194c972f14bb7ae507b4ba95d7eea8041a3078e3f80fa36914832b29972",
+    "url": "https://registry.npmjs.org/appwrite/-/appwrite-29.1.0.tgz"
+  },
+  "runtime": {
+    "localOnly": true,
+    "rebuilt": false,
+    "installedDependencies": false,
+    "originalIifeBytesPreserved": true
+  },
+  "provenanceLimits": [
+    "MQTT nested component versions are corroborated by companion bundle and immutable release source lock, not a cryptographic rebuild.",
+    "json-bigint attributed upstream exact copy revisions are unknown; full historically matching BSD texts are retained.",
+    "Complete identified notice coverage does not certify legal compliance, real provider behavior, or publication acceptance."
+  ],
+  "files": [
+    {
+      "path": "appwrite-29.1.0.js",
+      "bytes": 670855,
+      "sha256": "e772ba1bafe4da8767bb7cd2cd6ffafc5aeb7fcab1dd2b5d17dd3b05a39b6419",
+      "source": "package/dist/iife/sdk.js",
+      "sourceSha256": "e772ba1bafe4da8767bb7cd2cd6ffafc5aeb7fcab1dd2b5d17dd3b05a39b6419",
+      "originUrl": "https://registry.npmjs.org/appwrite/-/appwrite-29.1.0.tgz",
+      "archiveEntry": "package/dist/iife/sdk.js",
+      "unmodifiedOriginal": true
+    },
+    {
+      "path": "appwrite-LICENSE.txt",
+      "bytes": 1540,
+      "sha256": "303c6843e7266554669df90c09cdddb644c71c4dd0cf20489d1ed1ee8107bbed",
+      "source": "package/LICENSE",
+      "sourceSha256": "303c6843e7266554669df90c09cdddb644c71c4dd0cf20489d1ed1ee8107bbed",
+      "originUrl": "https://registry.npmjs.org/appwrite/-/appwrite-29.1.0.tgz",
+      "archiveEntry": "package/LICENSE",
+      "unmodifiedOriginal": true
+    },
+    {
+      "path": "notices/dependencies/tslib-2.8.1/package/CopyrightNotice.txt",
+      "bytes": 822,
+      "sha256": "da16ddb65f8ca390998fb99223d0112498b56b45784d00afd77ff8ce1ac4de8b",
+      "source": "dependencies/tslib-2.8.1/package/CopyrightNotice.txt",
+      "sourceSha256": "da16ddb65f8ca390998fb99223d0112498b56b45784d00afd77ff8ce1ac4de8b",
+      "originUrl": "https://registry.npmjs.org/tslib/-/tslib-2.8.1.tgz",
+      "archiveEntry": "package/CopyrightNotice.txt",
+      "unmodifiedOriginal": true
+    },
+    {
+      "path": "notices/dependencies/tslib-2.8.1/package/LICENSE.txt",
+      "bytes": 655,
+      "sha256": "210b19e543130388c68654b7497e967119ce17145f66ab7d85688fbd70f08751",
+      "source": "dependencies/tslib-2.8.1/package/LICENSE.txt",
+      "sourceSha256": "210b19e543130388c68654b7497e967119ce17145f66ab7d85688fbd70f08751",
+      "originUrl": "https://registry.npmjs.org/tslib/-/tslib-2.8.1.tgz",
+      "archiveEntry": "package/LICENSE.txt",
+      "unmodifiedOriginal": true
+    },
+    {
+      "path": "notices/dependencies/bignumber.js-9.3.1/package/LICENCE.md",
+      "bytes": 1147,
+      "sha256": "def75ba75d6426f1c3f02addf8e175fbe6e0d8a82e541cbdffc16d2bd8fd7d6a",
+      "source": "dependencies/bignumber.js-9.3.1/package/LICENCE.md",
+      "sourceSha256": "def75ba75d6426f1c3f02addf8e175fbe6e0d8a82e541cbdffc16d2bd8fd7d6a",
+      "originUrl": "https://registry.npmjs.org/bignumber.js/-/bignumber.js-9.3.1.tgz",
+      "archiveEntry": "package/LICENCE.md",
+      "unmodifiedOriginal": true
+    },
+    {
+      "path": "notices/dependencies/json-bigint-1.0.0/package/LICENSE",
+      "bytes": 1081,
+      "sha256": "def82c085d05e795fe6a9cb5b70c48e022212355afc0e91d4de047cade28df06",
+      "source": "dependencies/json-bigint-1.0.0/package/LICENSE",
+      "sourceSha256": "def82c085d05e795fe6a9cb5b70c48e022212355afc0e91d4de047cade28df06",
+      "originUrl": "https://registry.npmjs.org/json-bigint/-/json-bigint-1.0.0.tgz",
+      "archiveEntry": "package/LICENSE",
+      "unmodifiedOriginal": true
+    },
+    {
+      "path": "notices/dependencies/mqtt-5.15.2/package/LICENSE.md",
+      "bytes": 1271,
+      "sha256": "81b51ef8ac2a8ac8f111ed34ab1a32d63e7f4f7de586bd65f5510fb1ba3a89eb",
+      "source": "dependencies/mqtt-5.15.2/package/LICENSE.md",
+      "sourceSha256": "81b51ef8ac2a8ac8f111ed34ab1a32d63e7f4f7de586bd65f5510fb1ba3a89eb",
+      "originUrl": "https://registry.npmjs.org/mqtt/-/mqtt-5.15.2.tgz",
+      "archiveEntry": "package/LICENSE.md",
+      "unmodifiedOriginal": true
+    },
+    {
+      "path": "notices/dependencies/buffer-6.0.3/package/LICENSE",
+      "bytes": 1106,
+      "sha256": "06bafa45fdad2579ba0e43b0c9b2c6290287c99c4203c300254a462b38a307f6",
+      "source": "dependencies/buffer-6.0.3/package/LICENSE",
+      "sourceSha256": "06bafa45fdad2579ba0e43b0c9b2c6290287c99c4203c300254a462b38a307f6",
+      "originUrl": "https://registry.npmjs.org/buffer/-/buffer-6.0.3.tgz",
+      "archiveEntry": "package/LICENSE",
+      "unmodifiedOriginal": true
+    },
+    {
+      "path": "notices/dependencies/ieee754-1.2.1/package/LICENSE",
+      "bytes": 1465,
+      "sha256": "18d45466ba3253deae04667e267a91ea8de8548f18c1125264d1c9db28194cc1",
+      "source": "dependencies/ieee754-1.2.1/package/LICENSE",
+      "sourceSha256": "18d45466ba3253deae04667e267a91ea8de8548f18c1125264d1c9db28194cc1",
+      "originUrl": "https://registry.npmjs.org/ieee754/-/ieee754-1.2.1.tgz",
+      "archiveEntry": "package/LICENSE",
+      "unmodifiedOriginal": true
+    },
+    {
+      "path": "notices/dependencies/safe-buffer-5.2.1/package/LICENSE",
+      "bytes": 1081,
+      "sha256": "c7cc929b57080f4b9d0c6cf57669f0463fc5b39906344dfc8d3bc43426b30eac",
+      "source": "dependencies/safe-buffer-5.2.1/package/LICENSE",
+      "sourceSha256": "c7cc929b57080f4b9d0c6cf57669f0463fc5b39906344dfc8d3bc43426b30eac",
+      "originUrl": "https://registry.npmjs.org/safe-buffer/-/safe-buffer-5.2.1.tgz",
+      "archiveEntry": "package/LICENSE",
+      "unmodifiedOriginal": true
+    },
+    {
+      "path": "notices/dependencies/@babel__runtime-7.29.10/package/LICENSE",
+      "bytes": 1106,
+      "sha256": "117da2af0d4ce0fe1c8e19b5cff9dcd806adf973d328d27b11d4448c4ff24f76",
+      "source": "dependencies/@babel__runtime-7.29.10/package/LICENSE",
+      "sourceSha256": "117da2af0d4ce0fe1c8e19b5cff9dcd806adf973d328d27b11d4448c4ff24f76",
+      "originUrl": "https://registry.npmjs.org/@babel/runtime/-/runtime-7.29.10.tgz",
+      "archiveEntry": "package/LICENSE",
+      "unmodifiedOriginal": true
+    },
+    {
+      "path": "notices/followup-originals/babel-helpers-LICENSE",
+      "bytes": 1189,
+      "sha256": "4be9d87b56a306293223b490c0d0b245e9e94f39884147bf051a6c7b825aeb30",
+      "source": "followup-originals/babel-helpers-LICENSE",
+      "sourceSha256": "4be9d87b56a306293223b490c0d0b245e9e94f39884147bf051a6c7b825aeb30",
+      "originUrl": "https://raw.githubusercontent.com/babel/babel/37d5595fca9f188f0534458180611f2e776acd31/packages/babel-helpers/LICENSE",
+      "archiveEntry": null,
+      "unmodifiedOriginal": true
+    },
+    {
+      "path": "notices/followup-originals/mqtt-included/@babel__runtime-7.29.2/package/LICENSE",
+      "bytes": 1106,
+      "sha256": "117da2af0d4ce0fe1c8e19b5cff9dcd806adf973d328d27b11d4448c4ff24f76",
+      "source": "followup-originals/mqtt-included/@babel__runtime-7.29.2/package/LICENSE",
+      "sourceSha256": "117da2af0d4ce0fe1c8e19b5cff9dcd806adf973d328d27b11d4448c4ff24f76",
+      "originUrl": "https://registry.npmjs.org/@babel/runtime/-/runtime-7.29.2.tgz",
+      "archiveEntry": "package/LICENSE",
+      "unmodifiedOriginal": true
+    },
+    {
+      "path": "notices/followup-originals/mqtt-included/@jspm__core-2.1.0/package/LICENSE",
+      "bytes": 42179,
+      "sha256": "b8bc5e4bbcf9023a91eccc0ee982bdfb92099adff03775bb6552925753ff1c89",
+      "source": "followup-originals/mqtt-included/@jspm__core-2.1.0/package/LICENSE",
+      "sourceSha256": "b8bc5e4bbcf9023a91eccc0ee982bdfb92099adff03775bb6552925753ff1c89",
+      "originUrl": "https://registry.npmjs.org/@jspm/core/-/core-2.1.0.tgz",
+      "archiveEntry": "package/LICENSE",
+      "unmodifiedOriginal": true
+    },
+    {
+      "path": "notices/followup-originals/mqtt-included/abort-controller-3.0.0/package/LICENSE",
+      "bytes": 1071,
+      "sha256": "dbbf03317f0101fed5643cd87ca80fb769e358fa4f428445bf2315deeb23a154",
+      "source": "followup-originals/mqtt-included/abort-controller-3.0.0/package/LICENSE",
+      "sourceSha256": "dbbf03317f0101fed5643cd87ca80fb769e358fa4f428445bf2315deeb23a154",
+      "originUrl": "https://registry.npmjs.org/abort-controller/-/abort-controller-3.0.0.tgz",
+      "archiveEntry": "package/LICENSE",
+      "unmodifiedOriginal": true
+    },
+    {
+      "path": "notices/followup-originals/mqtt-included/bl-6.1.6/package/LICENSE.md",
+      "bytes": 1216,
+      "sha256": "9377db95383c8befacf05c6e465d969d756edf178487ca1344fdf3ba147c596f",
+      "source": "followup-originals/mqtt-included/bl-6.1.6/package/LICENSE.md",
+      "sourceSha256": "9377db95383c8befacf05c6e465d969d756edf178487ca1344fdf3ba147c596f",
+      "originUrl": "https://registry.npmjs.org/bl/-/bl-6.1.6.tgz",
+      "archiveEntry": "package/LICENSE.md",
+      "unmodifiedOriginal": true
+    },
+    {
+      "path": "notices/followup-originals/mqtt-included/broker-factory-3.1.14/package/LICENSE",
+      "bytes": 1076,
+      "sha256": "04238a17c611b988a3ef5934e6c247acd4a344c837f60b223f3d9ffb57aa4dde",
+      "source": "followup-originals/mqtt-included/broker-factory-3.1.14/package/LICENSE",
+      "sourceSha256": "04238a17c611b988a3ef5934e6c247acd4a344c837f60b223f3d9ffb57aa4dde",
+      "originUrl": "https://registry.npmjs.org/broker-factory/-/broker-factory-3.1.14.tgz",
+      "archiveEntry": "package/LICENSE",
+      "unmodifiedOriginal": true
+    },
+    {
+      "path": "notices/followup-originals/mqtt-included/debug-4.4.3/package/LICENSE",
+      "bytes": 1139,
+      "sha256": "3a61c6c96caf5c1d9b623fb9b04c822b783dfcb78aa7e49c76a3f643e6ed7f95",
+      "source": "followup-originals/mqtt-included/debug-4.4.3/package/LICENSE",
+      "sourceSha256": "3a61c6c96caf5c1d9b623fb9b04c822b783dfcb78aa7e49c76a3f643e6ed7f95",
+      "originUrl": "https://registry.npmjs.org/debug/-/debug-4.4.3.tgz",
+      "archiveEntry": "package/LICENSE",
+      "unmodifiedOriginal": true
+    },
+    {
+      "path": "notices/followup-originals/mqtt-included/esbuild-plugin-polyfill-node-0.3.0/package/LICENSE",
+      "bytes": 1053,
+      "sha256": "3d81357ade8337905aaa45386cb23ccd4a6e1a02515f7426285ca9c7721b8d31",
+      "source": "followup-originals/mqtt-included/esbuild-plugin-polyfill-node-0.3.0/package/LICENSE",
+      "sourceSha256": "3d81357ade8337905aaa45386cb23ccd4a6e1a02515f7426285ca9c7721b8d31",
+      "originUrl": "https://registry.npmjs.org/esbuild-plugin-polyfill-node/-/esbuild-plugin-polyfill-node-0.3.0.tgz",
+      "archiveEntry": "package/LICENSE",
+      "unmodifiedOriginal": true
+    },
+    {
+      "path": "notices/followup-originals/mqtt-included/fast-unique-numbers-9.0.27/package/LICENSE",
+      "bytes": 1076,
+      "sha256": "04238a17c611b988a3ef5934e6c247acd4a344c837f60b223f3d9ffb57aa4dde",
+      "source": "followup-originals/mqtt-included/fast-unique-numbers-9.0.27/package/LICENSE",
+      "sourceSha256": "04238a17c611b988a3ef5934e6c247acd4a344c837f60b223f3d9ffb57aa4dde",
+      "originUrl": "https://registry.npmjs.org/fast-unique-numbers/-/fast-unique-numbers-9.0.27.tgz",
+      "archiveEntry": "package/LICENSE",
+      "unmodifiedOriginal": true
+    },
+    {
+      "path": "notices/followup-originals/mqtt-included/inherits-2.0.4/package/LICENSE",
+      "bytes": 749,
+      "sha256": "5ffe28e7ade7d8f10d85d5337a73fd793dac5c462fb9a28fbf8c5046c7fbca3b",
+      "source": "followup-originals/mqtt-included/inherits-2.0.4/package/LICENSE",
+      "sourceSha256": "5ffe28e7ade7d8f10d85d5337a73fd793dac5c462fb9a28fbf8c5046c7fbca3b",
+      "originUrl": "https://registry.npmjs.org/inherits/-/inherits-2.0.4.tgz",
+      "archiveEntry": "package/LICENSE",
+      "unmodifiedOriginal": true
+    },
+    {
+      "path": "notices/followup-originals/mqtt-included/js-sdsl-4.3.0/package/LICENSE",
+      "bytes": 1067,
+      "sha256": "787684b2059945f845f404340e20c4c8e3f325f4ab7aaeaf8e985f38c8d84658",
+      "source": "followup-originals/mqtt-included/js-sdsl-4.3.0/package/LICENSE",
+      "sourceSha256": "787684b2059945f845f404340e20c4c8e3f325f4ab7aaeaf8e985f38c8d84658",
+      "originUrl": "https://registry.npmjs.org/js-sdsl/-/js-sdsl-4.3.0.tgz",
+      "archiveEntry": "package/LICENSE",
+      "unmodifiedOriginal": true
+    },
+    {
+      "path": "notices/followup-originals/mqtt-included/lru-cache-10.4.3/package/LICENSE",
+      "bytes": 775,
+      "sha256": "451ec07eeb9c4e1b86de9abdaa426462a8be48f887ec7421cf0bbb9c769555ab",
+      "source": "followup-originals/mqtt-included/lru-cache-10.4.3/package/LICENSE",
+      "sourceSha256": "451ec07eeb9c4e1b86de9abdaa426462a8be48f887ec7421cf0bbb9c769555ab",
+      "originUrl": "https://registry.npmjs.org/lru-cache/-/lru-cache-10.4.3.tgz",
+      "archiveEntry": "package/LICENSE",
+      "unmodifiedOriginal": true
+    },
+    {
+      "path": "notices/followup-originals/mqtt-included/mqtt-packet-9.0.2/package/LICENSE.md",
+      "bytes": 1249,
+      "sha256": "51c9c4054d580356e61a83ef0731046a9909c37e2495894d795828fd56041d27",
+      "source": "followup-originals/mqtt-included/mqtt-packet-9.0.2/package/LICENSE.md",
+      "sourceSha256": "51c9c4054d580356e61a83ef0731046a9909c37e2495894d795828fd56041d27",
+      "originUrl": "https://registry.npmjs.org/mqtt-packet/-/mqtt-packet-9.0.2.tgz",
+      "archiveEntry": "package/LICENSE.md",
+      "unmodifiedOriginal": true
+    },
+    {
+      "path": "notices/followup-originals/mqtt-included/ms-2.1.3/package/license.md",
+      "bytes": 1079,
+      "sha256": "1662fae9b5314d11cf51284e2dcd1f006a354f7343f08712a730fcff9a359801",
+      "source": "followup-originals/mqtt-included/ms-2.1.3/package/license.md",
+      "sourceSha256": "1662fae9b5314d11cf51284e2dcd1f006a354f7343f08712a730fcff9a359801",
+      "originUrl": "https://registry.npmjs.org/ms/-/ms-2.1.3.tgz",
+      "archiveEntry": "package/license.md",
+      "unmodifiedOriginal": true
+    },
+    {
+      "path": "notices/followup-originals/mqtt-included/number-allocator-1.0.14/package/LICENSE",
+      "bytes": 1072,
+      "sha256": "0b82716ea785fe76dffcd1755b2e9cda14fd1cf63c47edd4986b8efd3506918f",
+      "source": "followup-originals/mqtt-included/number-allocator-1.0.14/package/LICENSE",
+      "sourceSha256": "0b82716ea785fe76dffcd1755b2e9cda14fd1cf63c47edd4986b8efd3506918f",
+      "originUrl": "https://registry.npmjs.org/number-allocator/-/number-allocator-1.0.14.tgz",
+      "archiveEntry": "package/LICENSE",
+      "unmodifiedOriginal": true
+    },
+    {
+      "path": "notices/followup-originals/mqtt-included/process-0.11.10/package/LICENSE",
+      "bytes": 1098,
+      "sha256": "59a400d04c5078579acc27ddd6452c1bdf763f9506e01364700935fbb1a7c91b",
+      "source": "followup-originals/mqtt-included/process-0.11.10/package/LICENSE",
+      "sourceSha256": "59a400d04c5078579acc27ddd6452c1bdf763f9506e01364700935fbb1a7c91b",
+      "originUrl": "https://registry.npmjs.org/process/-/process-0.11.10.tgz",
+      "archiveEntry": "package/LICENSE",
+      "unmodifiedOriginal": true
+    },
+    {
+      "path": "notices/followup-originals/mqtt-included/process-nextick-args-2.0.1/package/license.md",
+      "bytes": 1064,
+      "sha256": "ecdccbcf39024f624ded480c01c0b25458e1eca8f26ecf040933865ce56d9a4f",
+      "source": "followup-originals/mqtt-included/process-nextick-args-2.0.1/package/license.md",
+      "sourceSha256": "ecdccbcf39024f624ded480c01c0b25458e1eca8f26ecf040933865ce56d9a4f",
+      "originUrl": "https://registry.npmjs.org/process-nextick-args/-/process-nextick-args-2.0.1.tgz",
+      "archiveEntry": "package/license.md",
+      "unmodifiedOriginal": true
+    },
+    {
+      "path": "notices/followup-originals/mqtt-included/readable-stream-4.7.0/package/LICENSE",
+      "bytes": 2337,
+      "sha256": "ec62dc96da0099b87f4511736c87309335527fb7031639493e06c95728dc8c54",
+      "source": "followup-originals/mqtt-included/readable-stream-4.7.0/package/LICENSE",
+      "sourceSha256": "ec62dc96da0099b87f4511736c87309335527fb7031639493e06c95728dc8c54",
+      "originUrl": "https://registry.npmjs.org/readable-stream/-/readable-stream-4.7.0.tgz",
+      "archiveEntry": "package/LICENSE",
+      "unmodifiedOriginal": true
+    },
+    {
+      "path": "notices/followup-originals/mqtt-included/rfdc-1.4.1/package/LICENSE",
+      "bytes": 1101,
+      "sha256": "1ce941682a96c7b898ecd125d0f2e22319758ea6f3adbf498a65d649b0f3f7dd",
+      "source": "followup-originals/mqtt-included/rfdc-1.4.1/package/LICENSE",
+      "sourceSha256": "1ce941682a96c7b898ecd125d0f2e22319758ea6f3adbf498a65d649b0f3f7dd",
+      "originUrl": "https://registry.npmjs.org/rfdc/-/rfdc-1.4.1.tgz",
+      "archiveEntry": "package/LICENSE",
+      "unmodifiedOriginal": true
+    },
+    {
+      "path": "notices/followup-originals/mqtt-included/safe-buffer-5.2.1/package/LICENSE",
+      "bytes": 1081,
+      "sha256": "c7cc929b57080f4b9d0c6cf57669f0463fc5b39906344dfc8d3bc43426b30eac",
+      "source": "followup-originals/mqtt-included/safe-buffer-5.2.1/package/LICENSE",
+      "sourceSha256": "c7cc929b57080f4b9d0c6cf57669f0463fc5b39906344dfc8d3bc43426b30eac",
+      "originUrl": "https://registry.npmjs.org/safe-buffer/-/safe-buffer-5.2.1.tgz",
+      "archiveEntry": "package/LICENSE",
+      "unmodifiedOriginal": true
+    },
+    {
+      "path": "notices/followup-originals/mqtt-included/string_decoder-1.3.0/package/LICENSE",
+      "bytes": 2338,
+      "sha256": "11f2aafb37d06b3ee5bdaf06e9811141d0da05263c316f3d627f45c20d43261b",
+      "source": "followup-originals/mqtt-included/string_decoder-1.3.0/package/LICENSE",
+      "sourceSha256": "11f2aafb37d06b3ee5bdaf06e9811141d0da05263c316f3d627f45c20d43261b",
+      "originUrl": "https://registry.npmjs.org/string_decoder/-/string_decoder-1.3.0.tgz",
+      "archiveEntry": "package/LICENSE",
+      "unmodifiedOriginal": true
+    },
+    {
+      "path": "notices/followup-originals/mqtt-included/worker-timers-8.0.31/package/LICENSE",
+      "bytes": 1076,
+      "sha256": "04238a17c611b988a3ef5934e6c247acd4a344c837f60b223f3d9ffb57aa4dde",
+      "source": "followup-originals/mqtt-included/worker-timers-8.0.31/package/LICENSE",
+      "sourceSha256": "04238a17c611b988a3ef5934e6c247acd4a344c837f60b223f3d9ffb57aa4dde",
+      "originUrl": "https://registry.npmjs.org/worker-timers/-/worker-timers-8.0.31.tgz",
+      "archiveEntry": "package/LICENSE",
+      "unmodifiedOriginal": true
+    },
+    {
+      "path": "notices/followup-originals/mqtt-included/worker-timers-broker-8.0.16/package/LICENSE",
+      "bytes": 1076,
+      "sha256": "04238a17c611b988a3ef5934e6c247acd4a344c837f60b223f3d9ffb57aa4dde",
+      "source": "followup-originals/mqtt-included/worker-timers-broker-8.0.16/package/LICENSE",
+      "sourceSha256": "04238a17c611b988a3ef5934e6c247acd4a344c837f60b223f3d9ffb57aa4dde",
+      "originUrl": "https://registry.npmjs.org/worker-timers-broker/-/worker-timers-broker-8.0.16.tgz",
+      "archiveEntry": "package/LICENSE",
+      "unmodifiedOriginal": true
+    },
+    {
+      "path": "notices/followup-originals/mqtt-included/ws-8.20.0/package/LICENSE",
+      "bytes": 1183,
+      "sha256": "2b29dcfe0d6471f7e8c92c5fb38c9f93edee10330937055440192f1832b1ecef",
+      "source": "followup-originals/mqtt-included/ws-8.20.0/package/LICENSE",
+      "sourceSha256": "2b29dcfe0d6471f7e8c92c5fb38c9f93edee10330937055440192f1832b1ecef",
+      "originUrl": "https://registry.npmjs.org/ws/-/ws-8.20.0.tgz",
+      "archiveEntry": "package/LICENSE",
+      "unmodifiedOriginal": true
+    },
+    {
+      "path": "notices/followup-originals/fastify__secure-json-parse/LICENSE.md",
+      "bytes": 1675,
+      "sha256": "394999a136392fdc208627810c47e0f5ce08c67ae4b05537fce07a0146fb6e72",
+      "source": "followup-originals/fastify__secure-json-parse/LICENSE.md",
+      "sourceSha256": "394999a136392fdc208627810c47e0f5ce08c67ae4b05537fce07a0146fb6e72",
+      "originUrl": "https://raw.githubusercontent.com/fastify/secure-json-parse/07574d6f317fa0f0338cb41e3901e5b85f7dd3d2/LICENSE.md",
+      "archiveEntry": null,
+      "unmodifiedOriginal": true
+    },
+    {
+      "path": "notices/followup-originals/hapijs__bourne/LICENSE.md",
+      "bytes": 1469,
+      "sha256": "b15d24a94c96b811b22f401ff78559074f46ba5d92dbd8d6e224aa9b1d5a3d61",
+      "source": "followup-originals/hapijs__bourne/LICENSE.md",
+      "sourceSha256": "b15d24a94c96b811b22f401ff78559074f46ba5d92dbd8d6e224aa9b1d5a3d61",
+      "originUrl": "https://raw.githubusercontent.com/hapijs/bourne/c3f3940f252edf6d75a8ae850bb000443de1c646/LICENSE.md",
+      "archiveEntry": null,
+      "unmodifiedOriginal": true
+    },
+    {
+      "path": "notices/source-attributions/tslib__tslib.es6.js.txt",
+      "bytes": 818,
+      "sha256": "7130b2f41c55bc4cf10d1000a4b74242135c8e8def9c9afe40009a9c79934483",
+      "source": "package/dist/iife/sdk.js.map",
+      "sourceSha256": "f6d74df2deab9e59c468c6bcd352312883fa5b84b9c47b63f4039684cb9c7b03",
+      "originUrl": "https://registry.npmjs.org/appwrite/-/appwrite-29.1.0.tgz",
+      "archiveEntry": "package/dist/iife/sdk.js.map",
+      "unmodifiedOriginal": false,
+      "extraction": "Exact unchanged source-content substring from original SDK source map",
+      "mapSource": "../../node_modules/tslib/tslib.es6.js",
+      "attributionSha256": "7130b2f41c55bc4cf10d1000a4b74242135c8e8def9c9afe40009a9c79934483"
+    },
+    {
+      "path": "notices/source-attributions/bignumber.js__bignumber.js.txt",
+      "bytes": 2162,
+      "sha256": "b88dc043e351c83cbd5ea0c86de9839b61e420bdd57936f341441eefc94f1e4c",
+      "source": "package/dist/iife/sdk.js.map",
+      "sourceSha256": "f6d74df2deab9e59c468c6bcd352312883fa5b84b9c47b63f4039684cb9c7b03",
+      "originUrl": "https://registry.npmjs.org/appwrite/-/appwrite-29.1.0.tgz",
+      "archiveEntry": "package/dist/iife/sdk.js.map",
+      "unmodifiedOriginal": false,
+      "extraction": "Exact unchanged source-content substring from original SDK source map",
+      "mapSource": "../../node_modules/bignumber.js/bignumber.js",
+      "attributionSha256": "b88dc043e351c83cbd5ea0c86de9839b61e420bdd57936f341441eefc94f1e4c"
+    },
+    {
+      "path": "notices/source-attributions/json-bigint__lib__stringify.js.txt",
+      "bytes": 6141,
+      "sha256": "ee167acd5654abf7d0ebdc2c564422b9178a61609a9b3f681fed6e86f0f4884b",
+      "source": "package/dist/iife/sdk.js.map",
+      "sourceSha256": "f6d74df2deab9e59c468c6bcd352312883fa5b84b9c47b63f4039684cb9c7b03",
+      "originUrl": "https://registry.npmjs.org/appwrite/-/appwrite-29.1.0.tgz",
+      "archiveEntry": "package/dist/iife/sdk.js.map",
+      "unmodifiedOriginal": false,
+      "extraction": "Exact unchanged source-content substring from original SDK source map",
+      "mapSource": "../../node_modules/json-bigint/lib/stringify.js",
+      "attributionSha256": "ee167acd5654abf7d0ebdc2c564422b9178a61609a9b3f681fed6e86f0f4884b"
+    },
+    {
+      "path": "notices/source-attributions/json-bigint__lib__parse.js.txt",
+      "bytes": 2662,
+      "sha256": "3efe547b92ba139eee9b2fed4b287e006434b0f7a98a801ec1314da284a42c68",
+      "source": "package/dist/iife/sdk.js.map",
+      "sourceSha256": "f6d74df2deab9e59c468c6bcd352312883fa5b84b9c47b63f4039684cb9c7b03",
+      "originUrl": "https://registry.npmjs.org/appwrite/-/appwrite-29.1.0.tgz",
+      "archiveEntry": "package/dist/iife/sdk.js.map",
+      "unmodifiedOriginal": false,
+      "extraction": "Exact unchanged source-content substring from original SDK source map",
+      "mapSource": "../../node_modules/json-bigint/lib/parse.js",
+      "attributionSha256": "3efe547b92ba139eee9b2fed4b287e006434b0f7a98a801ec1314da284a42c68"
+    },
+    {
+      "path": "notices/source-attributions/mqtt__dist__mqtt.esm.js.txt",
+      "bytes": 491,
+      "sha256": "894f39cd962c27f40a29411655f75a4c43a9af1b686bdf2b32b1ee50b8f0934d",
+      "source": "package/dist/iife/sdk.js.map",
+      "sourceSha256": "f6d74df2deab9e59c468c6bcd352312883fa5b84b9c47b63f4039684cb9c7b03",
+      "originUrl": "https://registry.npmjs.org/appwrite/-/appwrite-29.1.0.tgz",
+      "archiveEntry": "package/dist/iife/sdk.js.map",
+      "unmodifiedOriginal": false,
+      "extraction": "Exact unchanged source-content substring from original SDK source map",
+      "mapSource": "../../node_modules/mqtt/dist/mqtt.esm.js",
+      "attributionSha256": "894f39cd962c27f40a29411655f75a4c43a9af1b686bdf2b32b1ee50b8f0934d"
+    }
+  ]
+}
